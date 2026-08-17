@@ -47,6 +47,7 @@ uv run pytest -v # --verbose подробный режим вывода при �
 ```
 
 ## 📁 Структура проекта
+```text
 01-hello-cli/
 ├── src/
 │   └── hello_cli/
@@ -57,3 +58,4 @@ uv run pytest -v # --verbose подробный режим вывода при �
 ├── pyproject.toml           # зависимости и scripts
 ├── README.md
 └── 01-Notes.md              # учебные заметки
+```

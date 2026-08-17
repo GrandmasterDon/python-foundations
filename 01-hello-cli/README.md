@@ -1,22 +1,25 @@
-# hello-cli
+# </> hello-cli
 
-CLI-утилита: принимает имя и печатает приветствие на трёх языках (EN / ES / RU).
+Минималистичная CLI-утилита на Python: принимает имя и печатает приветствие на трёх языках (EN / ES / RU).
 
-## Задача
+Учебный проект из **блока A (задача 1)** roadmap [justxor](https://github.com/justxor/MachineLearningRoadmap#-%D0%B1%D0%BB%D0%BE%D0%BA-a-python-%D0%B8-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8-110) — «Python и инструменты».
 
-Учебный проект из блока A (задача 1) roadmap justxor («Python и инструменты»):
+## 🛠 Технологический стек
 
-- CLI на [Click](https://click.palletsprojects.com/)
-- опции `--name` и `--count`
-- вывод приветствия на 3 языках
-- тесты на pytest
+- **Python 3.13+**
+- **[uv](https://github.com/astral-sh/uv)** — менеджер проектов и зависимостей
+- **[Click](https://click.palletsprojects.com/)** — CLI-фреймворк
+- **pytest** — тесты
+- **CliRunner** — тестирование Click без реального терминала
 
-## Требования
+## 🙌 Возможности
 
-- Python 3.13+
-- [uv](https://github.com/astral-sh/uv)
+- опция `--name` — имя для приветствия
+- опция `--count` — сколько раз повторить вывод (по умолчанию 1)
+- приветствие сразу на **английском, испанском и русском**
+- покрытие тестами (`2 passed`)
 
-## Установка
+## 🚀 Установка
 
 ```bash
 cd 01-hello-cli
@@ -24,7 +27,7 @@ uv sync
 uv pip install -e .
 ```
 
-## Использование
+## 🎮 Использование
 
 ```bash
 uv run hello-cli --name Anna
@@ -38,18 +41,19 @@ Hola, Anna!
 Привет, Anna!
 ```
 
-## Тесты
+## 🧪 Тесты
 ```bash
 uv run pytest -v # --verbose подробный режим вывода при запуске тестов
 ```
 
-## Структура
+## 📁 Структура проекта
 01-hello-cli/
-├── src/hello_cli/
-│   ├── __init__.py
-│   └── __main__.py      # CLI
+├── src/
+│   └── hello_cli/
+│       ├── __init__.py
+│       └── __main__.py      # CLI-логика
 ├── tests/
-│   └── test_hello.py
-├── pyproject.toml
+│   └── test_hello.py        # pytest + CliRunner
+├── pyproject.toml           # зависимости и scripts
 ├── README.md
-└── 01-Notes.md          # учебные заметки
+└── 01-Notes.md              # учебные заметки

@@ -1,5 +1,5 @@
 from click.testing import CliRunner
-from hello_cli.__main__ import hello
+from hello_cli.__main__ import hello  # пакет hello_cli; модуль __main__; функция hello
 
 
 def test_hello_three_languages():

@@ -91,4 +91,6 @@
 
 - В `pyproject.toml` сразу прописывать `[project.scripts]` и `pythonpath` для pytest
 
-- Notes и .README нужно разделять
+- Notes и .README нужно разделять, примерно так:
+- **README** = задача + запуск + структура  
+- **Notes** = спотыкания + выводы + «что улучшить»

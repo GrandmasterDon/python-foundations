@@ -1,4 +1,4 @@
-[project]
+[project] #Имя, версия, зависимости проекта
 name = "01-hello-cli"
 version = "0.1.0"
 description = "Add your description here"
@@ -8,7 +8,21 @@ dependencies = [
     "click>=8.4.2",
 ]
 
-[dependency-groups]
+[dependency-groups] # dev-зависимости (pytest), не для продакшена
 dev = [
     "pytest>=9.1.1",
 ]
+
+[project.scripts] # Создаёт команду hello-cli в терминале → вызывает функцию hello
+hello-cli = "hello_cli.__main__:hello"
+
+[build-system] # Чем собирать пакет (hatchling)
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel] # Где лежит код пакета (src/hello_cli)
+packages = ["src/hello_cli"]
+
+[tool.pytest.ini_options] # Настройки pytest: где тесты и куда смотреть за импортами
+pythonpath = ["src"]
+testpaths = ["tests"]
